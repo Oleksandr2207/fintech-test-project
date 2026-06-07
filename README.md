@@ -1,73 +1,124 @@
-# React + TypeScript + Vite
+# Fintech Test Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application built with TypeScript, Vite, TanStack Query, TanStack Table, Zustand, Tailwind CSS, React Hook Form, and Yup.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Fetches users and posts from the JSONPlaceholder API
+- Stores fetched data in Zustand state management
+- Displays data in a responsive table using TanStack Table
+- User filtering functionality
+- Form handling with React Hook Form and Yup validation
+- Modern UI built with Tailwind CSS
+- Client-side routing with React Router
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
 
-## Expanding the ESLint configuration
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### State Management
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Zustand
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Data Fetching
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- TanStack Query
+- Axios
+
+### Table Management
+
+- TanStack Table
+
+### Forms & Validation
+
+- React Hook Form
+- Yup
+
+### Routing
+
+- React Router DOM
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+cd fintech-test-project
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+## Running the Project
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The application will be available at:
+
+```text
+http://localhost:5173
+```
+
+## Available Scripts
+
+### Start development server
+
+```bash
+npm run dev
+```
+
+### Build for production
+
+```bash
+npm run build
+```
+
+### Preview production build
+
+```bash
+npm run preview
+```
+
+### Run ESLint
+
+```bash
+npm run lint
+```
+
+## Project Structure
+
+```text
+src/
+├── components/
+├── pages/
+├── services/
+├── store/
+├── hooks/
+├── types/
+├── routes/
+└── utils/
+```
+
+## API
+
+The project uses the JSONPlaceholder API:
+
+- https://jsonplaceholder.typicode.com/users
+- https://jsonplaceholder.typicode.com/posts
+
+## License
+
+This project was created as a technical assessment and is intended for educational and evaluation purposes.
